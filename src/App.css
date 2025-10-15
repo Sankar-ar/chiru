@@ -1,0 +1,305 @@
+/* App.css */
+
+.app-container {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+ background:  rgba(226, 109, 232, 0.945);;
+
+  /* Flexbox center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optional: Transparent login card */
+.form-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Optional: style hellov   ydbgfqxgq fyhqbfx qhsk g  wdhiqwjdsfvsi1svs  nqsyqgwmsbq sgvq ks    qhsbj  wsgq vysgqkmsqmd qwwwwqvgvsqfgydbhbdjqhkdmxkjdqvysgqjdhggdm  usgujns   fqksbq sbqk,dwqd nqhwgdhwqh     hersbdusoysgygjwtjdstjnshvbs gkydb gyjdjwhijn  for logo inside login form */
+.app-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+
+/* Login / Signup form card */
+.form-card {
+  background: rgb(246, 243, 245);
+  display: inline-block;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+}
+
+
+.input-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem auto;
+  width: 90%;
+}
+
+.input-icon-wrapper .input-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 1.1rem;
+}
+
+.input-icon-wrapper input {
+  width: 100%;
+  padding: 0.6rem 0.6rem 0.6rem 2rem; /* space for icon */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  display: block;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 90%;
+  padding-right: 30px; /* space for eye icon */
+}
+
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+}
+
+
+input {
+  display: block;
+  margin: 0.5rem auto;
+  padding: 0.6rem;
+  width: 90%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.link {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+/* Toast Container */
+.toast {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #333;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+  z-index: 100; 
+}
+
+/* Show animation */
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hide animation */
+.toast.hide {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Close button */
+.close-btn {
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.close-btn:hover {
+  color: #ff4d4d;
+}
+
+/* Home Page Layout */
+.home-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #007bff;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.sidebar button:hover,
+.sidebar button.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Category buttons */
+.categories {
+  margin: 1rem 0;
+}
+
+.categories button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #007bff;
+  background: white;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.categories button.active-category {
+  background: #007bff;
+  color: white;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Product Card */
+.product-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-card h4 {
+  margin: 0.5rem 0;
+}
+
+.product-card p {
+  font-size: 0.85rem;
+  color: gray;
+  margin: 0.3rem 0;
+}
+
+.product-card button {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* Cart */
+.cart {
+  margin-top: 2rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart h3 {
+  margin-top: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item button {
+  background: #dc3545;
+  color: white;
+  padding: 0.2rem 0.6rem;
+}
+
+.cart-item button:hover {
+  background: #a71d2a;
+}
+
+/* Checkout */
+.checkout {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkout button {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* Logout button */
+.logout-btn {
+  margin-top: 2rem;
+  background: #dc3545;
+}
+
+.logout-btn:hover {
+  background: #a71d2a;
+}
